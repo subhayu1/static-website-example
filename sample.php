@@ -111,7 +111,7 @@
 						$ct= mysqli_real_escape_string($connection,$address_city);
 							$st= mysqli_real_escape_string($connection,$address_state);
 								$zip= mysqli_real_escape_string ($connection,$zip)
-		        $query = "INSERT INTO EMPLOYEES (First Name, Last Name, Line one, City, State, Zip) VALUES ('$n', '$l', $s, $ct, $st, $zip);";
+		        $query = "INSERT INTO customers (First Name, Last Name, Line one, City, State, Zip) VALUES ('$n', '$l', $s, $ct, $st, $zip);";
 
 			   if(!mysqli_query($connection, $query)) echo("<p>Error adding employee data.</p>");
 	  }
