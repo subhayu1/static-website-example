@@ -2,7 +2,7 @@
 <?php include "../inc/dbinfo.inc"; ?>
 <html>
 <body>
-<h1>Enter you information here</h1>
+<h1>Sample page</h1>
 <?php
 
   /* Connect to MySQL and select the database. */
@@ -28,34 +28,17 @@
 <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
   <table border="0">
     <tr>
-      <td>First Name</td>
-      <td>Last Name</td>
-	  <td>Line One</td>
-	  <td>City</td>
-	  <td>State</td>
-	  <td>Zip</td>
+      <td>NAME</td>
+      <td>ADDRESS</td>
     </tr>
     <tr>
       <td>
-        <input type="text" name="First Name" maxlength="45" size="30" />
+        <input type="text" name="NAME" maxlength="45" size="30" />
       </td>
       <td>
-        <input type="text" name="Last Name" maxlength="90" size="60" />
-      </td>
-	  <td>
-        <input type="text" name="Line one" maxlength="45" size="30" />
-      </td>
-	  <td>
-        <input type="text" name="City" maxlength="45" size="30" />
-      </td>
-	  <td>
-        <input type="text" name="State" maxlength="45" size="2" />
+        <input type="text" name="ADDRESS" maxlength="90" size="60" />
       </td>
       <td>
-	  <td>
-        <input type="text" name="Zip" maxlength="45" size="5" />
-      </td>
-	  <td>
         <input type="submit" value="Add Data" />
       </td>
     </tr>
@@ -66,12 +49,8 @@
 <table border="1" cellpadding="2" cellspacing="2">
   <tr>
     <td>ID</td>
-    <td>First Name</td>
-    <td>Last Name</td>
-	<td>line one</td>
-	<td>City</td>
-	<td>State</td>
-	<td>Zip</td>
+    <td>NAME</td>
+    <td>ADDRESS</td>
   </tr>
 
 <?php
@@ -104,14 +83,22 @@
 <?php
 
 	  /* Add an employee to the table. */
+<<<<<<< HEAD
 	  function AddEmployee($connection, $fname, $lname,$address_street,$address_city,$address_state,$address_zip) {
-		     $n = mysqli_real_escape_string($connection, $fname);
-		        $l = mysqli_real_escape_string($connection, $lname);
-					$s= mysqli_real_escape_string($connection,$address_street);
-						$ct= mysqli_real_escape_string($connection,$address_city);
-							$st= mysqli_real_escape_string($connection,$address_state);
-								$zip= mysqli_real_escape_string ($connection,$zip)
-		        $query = "INSERT INTO customers (First Name, Last Name, Line one, City, State, Zip) VALUES ('$n', '$l', $s, $ct, $st, $zip);";
+		    $n = mysqli_real_escape_string($connection, $fname);
+		    $l = mysqli_real_escape_string($connection, $lname);
+			$s= mysqli_real_escape_string($connection,$address_street);
+			$ct= mysqli_real_escape_string($connection,$address_city);
+			$st= mysqli_real_escape_string($connection,$address_state);
+			$zip= mysqli_real_escape_string ($connection,$zip)
+		    $query = "INSERT INTO customers (First Name, Last Name, Line one, City, State, Zip) VALUES ('$n', '$l', $s, $ct, $st, $zip);";
+=======
+	  function AddEmployee($connection, $name, $address) {
+		     $n = mysqli_real_escape_string($connection, $name);
+		        $a = mysqli_real_escape_string($connection, $address);
+
+		        $query = "INSERT INTO EMPLOYEES (NAME, ADDRESS) VALUES ('$n', '$a');";
+>>>>>>> parent of 38a6084 (adding without debigging)
 
 			   if(!mysqli_query($connection, $query)) echo("<p>Error adding employee data.</p>");
 	  }
@@ -142,5 +129,7 @@
 
 		        return false;
 			}
-?>                        
+			
+?>
+
                 
