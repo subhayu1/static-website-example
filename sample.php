@@ -128,8 +128,6 @@
 		        if(mysqli_num_rows($checktable) > 0) return true;
 
 		        return false;
-			}
-			
+				
 ?>
 
-                

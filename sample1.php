@@ -50,6 +50,7 @@
     <td>ID</td>
     <td>NAME</td>
     <td>ADDRESS</td>
+    <td>
   </tr>
 
 <?php
