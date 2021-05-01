@@ -65,30 +65,23 @@
 							<article id="about">
 								<h2 class="major">About Me</h2>
 								<span class="image main"><img src="images/pic06.jpg" alt="" /></span>
-								<p><iframe height="360" width="520" src="http://52.86.172.31:8080/webapp/"></iframe></p>
+								<p><iframe height="1216" width="1000" src="http://52.86.172.31:8080/webapp/"></iframe></p>
 								
 							</article>	
 
 						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="field half first">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="special" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
+						<?php
+						<form action="mailto:subhayu.rimal@gmail.com" method="post" enctype="text/plain">
+							Name:<br>
+							<input type="text" name=$name1><br>
+							E-mail:<br>
+							<input type="text" name="name"><br>
+							Comment:<br>
+							<input type="text" name="comment" size="50"><br><br>
+							<input type="submit" value="Send">
+							<input type="reset" value="Reset">
+							</form>
+							?>
 								</form>
 								<ul class="icons">
 									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
@@ -342,7 +335,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	                    <!-- Stock -->
 	                    <article id="stock">
 	                 	<h2 class="major">Stock</h2>
-	                 	<span class="image main"><img src="images/pic04.png" alt="" /></span>
+	                 	<span class="image main"><img src="https://haandebro-assets.s3.amazonaws.com/DSC_0120.JPG" alt="" /></span>
 		                <p><iframe height="360" width="520" src="http://52.86.172.31:8080/webapp/index.jsp"></iframe></p>
 	                    </article>
 
